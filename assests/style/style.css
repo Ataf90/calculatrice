@@ -1,58 +1,62 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0 auto;
+  /* border: 1px solid red ; */
 }
-body {
-  display: flex;
-  justify-content: center;
-}
+
 main {
-  margin: 50px;
-  padding-top: 90px;
-  padding-bottom: 140px;
-  border: 1px solid rgb(146, 128, 128);
+  margin: 15px auto;
+  padding: 10px;
   width: 50%;
+  border: 1px solid rgb(146, 128, 128);
   border-radius: 14px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-/* .calculatrice {
-  padding: 66px;
-  border: 1p solid black;
-  margin: 60px;
-} */
-.clac-ecran {
+.calculatrice {
   padding: 10px;
-  border-radius: 6px;
-  width: 50%;
-  margin-left: 150px;
-  padding-top: 40px;
-  height: 20%;
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h2 {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+.calc-ecran {
+  padding: 14px;
+  width: 75%;
   text-align: right;
   font-size: xx-large;
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .clavier {
+  width: 100%;
   margin-top: 30px;
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: repeat(3, 100px);
-  gap: 5px;
+  grid-template-columns: repeat(3, 21%);
+  gap: 3px;
 }
 
 button {
   /* box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
-  font-size: 33px;
+  font-size: 22px;
   cursor: pointer;
+  padding: 35px;
+  align-items: center;
 }
 button:active {
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.btn-num {  
-  padding: 23px;
+.btn-num {
+  padding: 35px;
   align-items: center;
-  
 }
 
+.btn-singes {
+  padding: 35px;
+  align-items: center;
+}
