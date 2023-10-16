@@ -67,7 +67,7 @@ mesBtn.forEach((mesBtn) => {
       document.querySelector("#calc_ecran").innerText = "";
     document.querySelector("#calc_ecran").innerText +=
       eventClick.target.innerText;
-    saisies.push(eventClick.target.innerText);
+    saisies.push(eventClick.target.innerText);// push mettre tous les élements saisies 
   });
 });
 //------------- crée mes calculates -----------------------
@@ -76,3 +76,4 @@ let calcul = document.querySelector(".btn-egale");
       document.querySelector(".calc-ecran").innerText = eval(
       document.querySelector(".calc-ecran").innerText)
     });
+//---------------finis mon calculatrice---------------------
