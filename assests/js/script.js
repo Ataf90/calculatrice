@@ -1,4 +1,5 @@
 let signes = ["+", "-", "*", "/"];
+let saisies = [];
 
 let main = document.createElement("main");
 document.body.appendChild(main);
@@ -7,10 +8,12 @@ document.body.appendChild(main);
 let calculatrice = document.createElement("div");
 main.appendChild(calculatrice);
 calculatrice.classList.add("calculatrice");
+
 // ----------------------Ecran ----------------
 let calcEcran = document.createElement("div");
 calcEcran.innerText = "0";
 calcEcran.classList.add("calc-ecran");
+calcEcran.setAttribute("id", "calc_ecran");
 calculatrice.appendChild(calcEcran);
 // ----------------------Clavier --------------
 let clavier = document.createElement("div");
@@ -21,10 +24,10 @@ for (let index = 9; index >= 0; index--) {
   let clavierCiffres = document.createElement("button");
   clavierCiffres.innerText = index;
   clavierCiffres.classList.add("btn-num");
-  clavierCiffres.setAttribute("id", "btn-all");
+  // clavierCiffres.setAttribute("btn_num");
   clavier.appendChild(clavierCiffres);
 }
-// --------- crée mes signes operateur ------------
+// --------- crée mes signes signes ------------
 for (let index = 0; index <= 3; index++) {
   let signesClav = document.createElement("button");
   signesClav.innerText = signes[index];
@@ -42,16 +45,34 @@ let point = document.createElement("button");
 point.innerText = ".";
 point.classList.add("btn-point");
 clavier.appendChild(point);
-//-------------- crée mon point------------------------------
+//---------------- crée mon button suprimer
 let suprimer = document.createElement("button");
 suprimer.innerText = "cl";
-suprimer.classList.add("btn-suprim");
+suprimer.classList.add("btn-cl");
+suprimer.setAttribute("id", "btn_cl");
 clavier.appendChild(suprimer);
-//------------------crée fonction pour apparaitre les numéro --------------
-let mesBtn = document.querySelectorAll("button");
-for (let index = 0; index <= mesBtn.length; index++) {
-  mesBtn[index].addEventListener("click", (eventClick) => {
-    document.querySelector("calc-ecran").innerText +=
+//----------------- suprimer----------------------------
+let clear = document.querySelector(".btn-cl");
+clear.addEventListener("click", function () {
+  saisies = [];
+  document.querySelector("#calc_ecran").innerText = "0";
+  console.log(saisies);
+});
+//------------------crée fonction pour apparaitre les numéro
+let mesBtn = document.querySelectorAll(".btn-num, .btn-singes,.btn-point");
+mesBtn.forEach((mesBtn) => {
+  mesBtn.addEventListener("click", (eventClick) => {
+    console.log(saisies.length);
+    if (saisies.length === 0)
+      document.querySelector("#calc_ecran").innerText = "";
+    document.querySelector("#calc_ecran").innerText +=
       eventClick.target.innerText;
+    saisies.push(eventClick.target.innerText);
   });
-}
+});
+//------------- crée mes calculates -----------------------
+let calcul = document.querySelector(".btn-egale");
+    calcul.addEventListener('click', (functionCalcul) => {
+      document.querySelector(".calc-ecran").innerText = eval(
+      document.querySelector(".calc-ecran").innerText)
+    });

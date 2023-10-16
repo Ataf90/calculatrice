@@ -25,11 +25,15 @@ h2 {
   font-size: 30px;
 }
 .calc-ecran {
+  background-color: darkgray;
   padding: 14px;
   width: 75%;
   text-align: right;
   font-size: xx-large;
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  text-wrap: wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .clavier {
   width: 100%;
@@ -45,18 +49,18 @@ button {
   /* box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
   font-size: 22px;
   cursor: pointer;
-  padding: 35px;
+  padding: 22px;
   align-items: center;
 }
 button:active {
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .btn-num {
-  padding: 35px;
+  padding: 22px;
   align-items: center;
 }
 
 .btn-singes {
-  padding: 35px;
+  padding: 22px;
   align-items: center;
 }
