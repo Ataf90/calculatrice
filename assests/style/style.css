@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  /* border: 1px solid red ; */
+}
+
+main {
+  margin: 15px auto;
+  padding: 10px;
+  width: 50%;
+  border: 1px solid rgb(146, 128, 128);
+  border-radius: 14px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.calculatrice {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h2 {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+.calc-ecran {
+  background-color: darkgray;
+  padding: 14px;
+  width: 75%;
+  text-align: right;
+  font-size: xx-large;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  text-wrap: wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.clavier {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 21%);
+  gap: 3px;
+}
+
+button {
+  /* box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
+  font-size: 22px;
+  cursor: pointer;
+  padding: 22px;
+  align-items: center;
+}
+button:active {
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.btn-num {
+  padding: 22px;
+  align-items: center;
+}
+
+.btn-singes {
+  padding: 22px;
+  align-items: center;
+}
